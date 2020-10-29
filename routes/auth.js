@@ -52,7 +52,7 @@ router.post('/signup',(req,res)=>{
                 subject: 'Signup Success',
                 html: "<h1>Welcome to Global Media</h2><br/> <p> Thanks for supporting us in Beta Program (: (; </p>"
               })
-            res.json({message:" Successfully signedup !!!!"})
+            .then(res.json({message:" Successfully signedup !!!!"}))
          } )
         .catch(err=>
             {
@@ -119,8 +119,8 @@ router.post('/resetpassword',(req,res)=>{
                     html: `<p> You are requested for Password reset </p>
                             <h5>Click in this <a href="https://nikkil-global-media-site.netlify.app/${token}">link</a> to reset password</h5>`
                   })
-            })
-            res.json({message:"Check you Email Inbox if not check Spam"})
+            }).then( res.json({message:"Check you Email Inbox if not check Spam"}))
+           
 
         })
     })
