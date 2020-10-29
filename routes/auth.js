@@ -117,7 +117,7 @@ router.post('/resetpassword',(req,res)=>{
                     to: user.email,
                     subject: 'Password Reset',
                     html: `<p> You are requested for Password reset </p>
-                            <h5>Click in this <a href="https://nikkil-global-media-site.netlify.app/${token}">link</a> to reset password</h5>`
+                            <h5>Click in this <a href="https://nikkil-global-media-site.netlify.app/reset/${token}">link</a> to reset password</h5>`
                   })
             }).then( res.json({message:"Check you Email Inbox if not check Spam"}))
            
